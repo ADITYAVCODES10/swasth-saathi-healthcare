@@ -37,6 +37,7 @@ ChartJS.register(
 );
 
 const Admin = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
+  const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('login');
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
