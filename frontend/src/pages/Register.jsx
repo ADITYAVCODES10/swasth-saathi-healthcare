@@ -12,6 +12,7 @@ import { Checkbox } from '../components/ui/checkbox';
 import { useToast } from '../hooks/use-toast';
 
 const Register = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     userType: '',
     name: '',
