@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, FileText, TrendingUp, Bell, Download, Search, Filter, Eye, Edit, Trash2, CheckCircle, XCircle } from 'lucide-react';
+import { Users, FileText, TrendingUp, Download, Search, Eye, CheckCircle, XCircle } from 'lucide-react';
 import { Line, Bar, Pie } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -435,10 +435,10 @@ const Admin = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
                                   {user.status === 'pending' && (
                                     <>
                                       <Button size="sm" className="bg-green-600 hover:bg-green-700">
-                                        <CheckCircle className="w-4 h-4" />
+                                        <CheckCircle className="w-4 h-4 mr-1" /> Approve
                                       </Button>
-                                      <Button size="sm" variant="destructive">
-                                        <XCircle className="w-4 h-4" />
+                                      <Button size="sm" className="bg-red-600 hover:bg-red-700">
+                                        <XCircle className="w-4 h-4 mr-1" /> Reject
                                       </Button>
                                     </>
                                   )}
@@ -452,41 +452,56 @@ const Admin = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
                   </CardContent>
                 </Card>
 
-                {/* Applications Review */}
+                {/* Application Management */}
                 <Card>
                   <CardHeader>
                     <CardTitle>{t.admin.dashboard.applications}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-4">
-                      {applications.map((app) => (
-                        <div key={app.id} className="flex items-center justify-between p-4 border rounded-lg">
-                          <div className="flex items-center space-x-4">
-                            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                              <FileText className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <p className="font-medium text-gray-900 dark:text-white">{app.name}</p>
-                              <p className="text-sm text-gray-600 dark:text-gray-400">{app.type}</p>
-                              <p className="text-sm text-gray-500">{app.documents} documents • {app.date}</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              app.status === 'review' 
-                                ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
-                                : app.status === 'pending'
-                                ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
-                                : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
-                            }`}>
-                              {app.status}
-                            </span>
-                            <Button size="sm" variant="outline">
-                              {t.admin.dashboard.actions.view}
-                            </Button>
-                          </div>
-                        </div>
-                      ))}
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead>
+                          <tr className="border-b">
+                            <th className="text-left py-3 px-4">Name</th>
+                            <th className="text-left py-3 px-4">Type</th>
+                            <th className="text-left py-3 px-4">Documents</th>
+                            <th className="text-left py-3 px-4">Status</th>
+                            <th className="text-left py-3 px-4">Date</th>
+                            <th className="text-left py-3 px-4">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {applications.map((app) => (
+                            <tr key={app.id} className="border-b">
+                              <td className="py-3 px-4 font-medium">{app.name}</td>
+                              <td className="py-3 px-4">{app.type}</td>
+                              <td className="py-3 px-4">{app.documents}</td>
+                              <td className="py-3 px-4">
+                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                  app.status === 'review' 
+                                    ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300'
+                                    : app.status === 'pending'
+                                    ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300'
+                                    : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'
+                                }`}>
+                                  {app.status}
+                                </span>
+                              </td>
+                              <td className="py-3 px-4">{app.date}</td>
+                              <td className="py-3 px-4">
+                                <div className="flex items-center space-x-2">
+                                  <Button size="sm" variant="outline">
+                                    <Eye className="w-4 h-4" />
+                                  </Button>
+                                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
+                                    Review
+                                  </Button>
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   </CardContent>
                 </Card>
@@ -497,7 +512,7 @@ const Admin = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
       </main>
 
       <Footer t={t} />
-      <ChatWidget t={t} language={language} />
+      <ChatWidget />
     </div>
   );
 };
