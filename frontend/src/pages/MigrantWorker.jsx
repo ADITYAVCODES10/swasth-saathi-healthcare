@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { useToast } from '../hooks/use-toast';
 
 const MigrantWorker = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
+  const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('register');
   const [formData, setFormData] = useState({
     fullName: '',
