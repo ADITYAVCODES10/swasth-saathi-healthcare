@@ -1,52 +1,54 @@
-import { useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import AppRouter from './routes/AppRouter';
+import { Toaster } from './components/ui/toaster';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Translation files
+import en from './i18n/en.json';
+import hi from './i18n/hi.json';
+import ml from './i18n/ml.json';
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+const translations = { en, hi, ml };
 
 function App() {
+  const [language, setLanguage] = useState('en');
+  const [darkMode, setDarkMode] = useState(false);
+  const [t, setT] = useState(translations.en);
+
+  // Load saved preferences
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+    setLanguage(savedLanguage);
+    setDarkMode(savedDarkMode);
+    setT(translations[savedLanguage] || translations.en);
+  }, []);
+
+  // Update translations when language changes
+  useEffect(() => {
+    setT(translations[language] || translations.en);
+  }, [language]);
+
+  // Apply dark mode class to document
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <AppRouter 
+        language={language}
+        setLanguage={setLanguage}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+        t={t}
+      />
+      <Toaster />
     </div>
   );
 }
