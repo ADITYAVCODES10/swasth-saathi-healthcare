@@ -8,7 +8,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { toast } from '../components/ui/toast';
+import { useToast } from '../hooks/use-toast';
 
 const Contact = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
   const [formData, setFormData] = useState({
