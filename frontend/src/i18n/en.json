@@ -1,0 +1,349 @@
+{
+  "brand": {
+    "name": "Swasth Saathi",
+    "tagline": "Your Digital Healthcare Companion for Every Journey",
+    "description": "A comprehensive government health portal connecting migrant workers, healthcare providers, and administrators for seamless medical care and health management across India."
+  },
+  "nav": {
+    "home": "Home",
+    "register": "Register",
+    "login": "Login",
+    "migrant": "Migrant Worker",
+    "doctor": "Doctor",
+    "admin": "Admin",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "loading": "Loading your health companion...",
+    "hero": {
+      "slide1": {
+        "title": "United Healthcare Team",
+        "description": "Bringing together medical professionals for comprehensive care"
+      },
+      "slide2": {
+        "title": "Safe & Secure Healthcare",
+        "description": "Following the highest safety protocols for your wellbeing"
+      },
+      "slide3": {
+        "title": "Digital Health Solutions",
+        "description": "Modern technology meeting healthcare needs"
+      },
+      "slide4": {
+        "title": "Advanced Medical Technology",
+        "description": "Cutting-edge tools for better health outcomes"
+      }
+    },
+    "features": {
+      "secure": "100% Secure & Private",
+      "available": "24/7 Available",
+      "multilingual": "Multi-language Support",
+      "comprehensive": "Comprehensive Care"
+    },
+    "services": {
+      "title": "Our Health Services",
+      "subtitle": "Comprehensive healthcare solutions designed for migrant workers, medical professionals, and healthcare administrators.",
+      "migrant": {
+        "title": "Migrant Worker Portal",
+        "description": "Register, access medical records, and get healthcare services wherever you are working.",
+        "button": "Access Portal"
+      },
+      "doctor": {
+        "title": "Doctor Dashboard",
+        "description": "Manage patient records, prescriptions, and provide quality healthcare services.",
+        "button": "Doctor Login"
+      },
+      "admin": {
+        "title": "Admin Panel",
+        "description": "Oversee healthcare operations, manage users, and generate comprehensive reports.",
+        "button": "Admin Access"
+      },
+      "emergency": {
+        "title": "Emergency Services",
+        "description": "24/7 emergency medical assistance and quick access to nearest healthcare facilities.",
+        "button": "Emergency Help"
+      }
+    },
+    "testimonials": {
+      "title": "Stories from Our Community",
+      "subtitle": "Real experiences from people who trust Swasth Saathi",
+      "testimonial1": "Swasth Saathi helped me access healthcare services easily while working in different states. The multilingual support is excellent!",
+      "testimonial2": "As a doctor, this platform makes it simple to manage patient records and provide continuous care for migrant workers.",
+      "testimonial3": "The admin dashboard provides clear insights into healthcare trends and helps us make better policy decisions."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Join thousands of users who trust Swasth Saathi for their healthcare needs",
+      "migrant": "Get Started as Worker",
+      "doctor": "Join as Doctor",
+      "register": "Register Now",
+      "learnMore": "Learn More"
+    }
+  },
+  "migrant": {
+    "title": "Migrant Worker Health Portal",
+    "subtitle": "Your digital health companion for work journeys across India",
+    "register": {
+      "title": "Worker Registration",
+      "subtitle": "Create your digital health profile",
+      "form": {
+        "personalInfo": "Personal Information",
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Enter your full name",
+        "dob": "Date of Birth",
+        "gender": "Gender",
+        "genderMale": "Male",
+        "genderFemale": "Female",
+        "genderOther": "Other",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+91 XXXXX XXXXX",
+        "email": "Email Address",
+        "emailPlaceholder": "your.email@example.com",
+        "address": "Current Address",
+        "addressPlaceholder": "Enter your current address",
+        "aadhaar": "Aadhaar Number",
+        "aadhaarPlaceholder": "XXXX XXXX XXXX",
+        "emergency": "Emergency Contact",
+        "emergencyPlaceholder": "+91 XXXXX XXXXX",
+        "documents": "Medical Documents",
+        "documentsHelp": "Upload medical certificates, previous prescriptions, or health reports",
+        "submit": "Register Now",
+        "submitting": "Registering..."
+      }
+    },
+    "dashboard": {
+      "welcome": "Welcome back",
+      "cards": {
+        "medicalHistory": {
+          "title": "Medical History",
+          "description": "View your complete medical records"
+        },
+        "prescriptions": {
+          "title": "Prescriptions",
+          "description": "Access current and past prescriptions"
+        },
+        "alerts": {
+          "title": "Health Alerts",
+          "description": "Important health notifications"
+        },
+        "appointments": {
+          "title": "Appointments",
+          "description": "Schedule and manage appointments"
+        }
+      },
+      "healthCard": {
+        "title": "Digital Health Card",
+        "download": "Download",
+        "print": "Print"
+      },
+      "recentActivity": "Recent Health Activities"
+    }
+  },
+  "doctor": {
+    "title": "Doctor Dashboard",
+    "subtitle": "Manage patient care and medical records efficiently",
+    "register": {
+      "title": "Doctor Registration",
+      "subtitle": "Join our network of healthcare professionals",
+      "form": {
+        "name": "Full Name",
+        "namePlaceholder": "Dr. Your Name",
+        "regNo": "Medical Registration Number",
+        "regNoPlaceholder": "Enter your medical registration number",
+        "specialization": "Specialization",
+        "specializationPlaceholder": "e.g., General Medicine, Cardiology",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+91 XXXXX XXXXX",
+        "email": "Email Address",
+        "emailPlaceholder": "doctor@example.com",
+        "clinic": "Clinic/Hospital Name",
+        "clinicPlaceholder": "Enter your workplace",
+        "certifications": "Upload Certifications",
+        "certificationsHelp": "Upload medical degree and certification documents",
+        "submit": "Register as Doctor",
+        "submitting": "Registering..."
+      }
+    },
+    "dashboard": {
+      "patientSearch": "Search Patients",
+      "patientSearchPlaceholder": "Search by name or ID",
+      "todayStats": "Today's Overview",
+      "appointments": "Appointments",
+      "pendingReports": "Pending Reports",
+      "actions": {
+        "viewHistory": "View Patient History",
+        "uploadReport": "Upload New Report",
+        "writePrescription": "Write Prescription"
+      }
+    }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "subtitle": "Healthcare system administration and management",
+    "login": {
+      "title": "Admin Login",
+      "subtitle": "Secure access to administrative panel",
+      "email": "Admin Email",
+      "emailPlaceholder": "admin@swasthsaathi.gov.in",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Login to Admin Panel",
+      "submitting": "Logging in..."
+    },
+    "dashboard": {
+      "overview": "System Overview",
+      "userManagement": "User Management",
+      "applications": "Applications",
+      "reports": "Reports & Analytics",
+      "notifications": "Notifications",
+      "activityLog": "Activity Log",
+      "analytics": {
+        "title": "Healthcare Analytics",
+        "usersChart": "Daily New User Registrations",
+        "appointmentsChart": "Appointments by Specialty",
+        "diseasesChart": "Disease Distribution",
+        "exportCSV": "Export Data"
+      },
+      "actions": {
+        "approve": "Approve",
+        "reject": "Reject",
+        "view": "View Details",
+        "edit": "Edit",
+        "delete": "Delete"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login to Swasth Saathi",
+      "subtitle": "Access your healthcare dashboard",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login",
+      "submitting": "Logging in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up here"
+    },
+    "register": {
+      "title": "Create Your Account",
+      "subtitle": "Join the Swasth Saathi community",
+      "userType": "I am a:",
+      "userTypes": {
+        "migrant": "Migrant Worker",
+        "doctor": "Healthcare Professional",
+        "admin": "Administrator"
+      },
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+91 XXXXX XXXXX",
+      "password": "Password",
+      "passwordPlaceholder": "Create a strong password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Create Account",
+      "submitting": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in here"
+    }
+  },
+  "about": {
+    "title": "About Swasth Saathi",
+    "subtitle": "Your trusted digital healthcare companion",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide accessible, comprehensive healthcare services to migrant workers across India through innovative digital solutions and seamless connectivity between patients, healthcare providers, and administrators."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To create a unified healthcare ecosystem where geographical boundaries don't limit access to quality medical care, ensuring every migrant worker receives timely and appropriate healthcare services."
+    },
+    "features": {
+      "title": "Key Features",
+      "feature1": "Digital Health Records",
+      "feature2": "Multi-language Support",
+      "feature3": "Emergency Services",
+      "feature4": "Telemedicine Integration",
+      "feature5": "Government Compliance",
+      "feature6": "24/7 Support"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our support team",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Describe your inquiry or issue",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Ministry of Health & Family Welfare, Government of India",
+      "phone": "+91-11-2XXX-XXXX",
+      "email": "help@swasthsaathi.gov.in",
+      "hours": "24/7 Support Available"
+    }
+  },
+  "chat": {
+    "title": "Swasth Saathi Assistant",
+    "welcomeMessage": "Hello! I'm your Swasth Saathi assistant. How can I help you today?",
+    "inputPlaceholder": "Type your message...",
+    "quickHelp": "Quick questions:",
+    "quickQuestions": {
+      "registration": "How do I register?",
+      "services": "What services are available?",
+      "emergency": "Emergency contact information",
+      "documents": "What documents do I need?"
+    },
+    "defaultResponse": "Thank you for your question. Our support team will get back to you soon.",
+    "errorMessage": "Sorry, I'm having trouble connecting. Please try again later."
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Info",
+    "privacy": "Privacy Policy",
+    "emergency": "Emergency Services",
+    "address": "Ministry of Health & Family Welfare, Government of India, New Delhi - 110001",
+    "rights": "All rights reserved.",
+    "govDisclaimer": "This is an official government health portal."
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "print": "Print",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Operation successful",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email",
+    "invalidPhone": "Please enter a valid phone number",
+    "passwordMismatch": "Passwords do not match"
+  }
+}
