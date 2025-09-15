@@ -9,9 +9,10 @@ import { Label } from '../components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Textarea } from '../components/ui/textarea';
-import { toast } from '../components/ui/toast';
+import { useToast } from '../hooks/use-toast';
 
 const Doctor = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
+  const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('register');
   const [formData, setFormData] = useState({
     name: '',
