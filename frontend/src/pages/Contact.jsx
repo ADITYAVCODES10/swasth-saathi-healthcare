@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { useToast } from '../hooks/use-toast';
 
 const Contact = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
