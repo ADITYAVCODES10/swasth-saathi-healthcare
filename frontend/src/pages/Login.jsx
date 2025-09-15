@@ -8,7 +8,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Checkbox } from '../components/ui/checkbox';
-import { toast } from '../components/ui/toast';
+import { useToast } from '../hooks/use-toast';
 
 const Login = ({ language, setLanguage, darkMode, setDarkMode, t }) => {
   const [formData, setFormData] = useState({
